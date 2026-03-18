@@ -1,0 +1,67 @@
+name: Feature Request
+description: Propose a new example, variant, or repository improvement for Anthale Examples.
+labels: [enhancement, triage]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion.
+
+        Anthale Examples is the source of truth for example code, so the most helpful requests explain the real workflow, the attack or failure mode, and the secure behavior that should be demonstrated.
+
+  - type: dropdown
+    id: request_type
+    validations:
+      required: true
+    attributes:
+      label: Request type
+      options:
+        - New example
+        - New variant
+        - Improvement to an existing example
+        - Shared package, tooling, or workflow improvement
+
+  - type: input
+    id: example_slug
+    attributes:
+      label: Example slug
+      description: If this relates to an existing or proposed example, provide the slug.
+      placeholder: secure-browser-agent
+
+  - type: textarea
+    id: use_case
+    validations:
+      required: true
+    attributes:
+      label: Use case
+      description: Describe the real workflow or customer problem this should cover.
+
+  - type: textarea
+    id: attack_or_risk
+    validations:
+      required: true
+    attributes:
+      label: Attack, risk, or failure mode
+      description: What security concern or trust boundary should the example demonstrate?
+
+  - type: textarea
+    id: proposal
+    validations:
+      required: true
+    attributes:
+      label: Proposed solution
+      description: Describe the example, variant, or repository change you want to see.
+      placeholder: |
+        Include any of the following if relevant:
+        - example structure
+        - proposed variants
+        - Anthale controls to showcase
+        - run and test expectations
+        - links to related docs or prior art
+
+  - type: textarea
+    id: success_criteria
+    attributes:
+      label: Success criteria
+      description: How should we know this request is complete and useful?

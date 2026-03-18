@@ -1,0 +1,76 @@
+name: Bug Report
+description: Report a bug or unexpected behavior in Anthale Examples.
+labels: [bug, triage]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug.
+
+        Please include enough detail for us to reproduce the issue in the relevant example or variant.
+
+  - type: input
+    id: example_slug
+    validations:
+      required: true
+    attributes:
+      label: Affected example
+      description: Which example is affected?
+      placeholder: secure-chatbot
+
+  - type: input
+    id: variant
+    attributes:
+      label: Affected variant
+      description: Which variant is affected, if applicable?
+      placeholder: typescript-nextjs
+
+  - type: textarea
+    id: description
+    validations:
+      required: true
+    attributes:
+      label: Description
+      description: Describe the current behavior and why it is incorrect.
+
+  - type: textarea
+    id: reproduce
+    validations:
+      required: true
+    attributes:
+      label: Steps to reproduce
+      description: Provide a minimal, reproducible set of steps.
+      render: shell
+      placeholder: |
+        1. Install dependencies
+        2. Start the example
+        3. Send this input or run this command
+        4. Observe the failure
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Describe the behavior you expected to see.
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, screenshots, or failing output
+      description: Include any relevant output, screenshots, or traces.
+
+  - type: textarea
+    id: environment
+    validations:
+      required: true
+    attributes:
+      label: Environment and versions
+      render: text
+      description: Include any version details that help us reproduce the issue.
+      placeholder: |
+        Anthale package or SDK version:
+        Model provider SDK version:
+        Runtime version:
+        OS:
+        Browser (if relevant):
